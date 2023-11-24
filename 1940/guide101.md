@@ -33,3 +33,91 @@ Incorporating a new element into your home, akin to adding a new feature in the 
 2. Remove the New Element: If a new feature proves too risky or offers minimal value, the most straightforward approach might be to remove it entirely. However, in a situation where a new feature is crucial for business operations and cannot be excised, removing it is not a viable option. In such cases, employing automated security measures becomes imperative. These measures work diligently to preserve the confidentiality, integrity, and availability of the system, akin to ensuring that the new chair does not compromise the safety and integrity of the home.
 
 Ultimately, when the addition of new features is essential, it is incumbent upon organizations to adopt the "ADD" approach by integrating automated security processes within the DevOps lifecycle. This ensures that every new feature is introduced with the necessary safeguards from inception, thereby upholding rigorous security standards while enabling business innovation and growth.
+
+# QA
+
+# QA
+
+1. What does DevSecOps stand for? A) Development, Security, Optimization B) Development, Security, and Operations C) Development, Services, and Operations D) Development, Systems, and Operations 
+
+Correct Answer: B Explanation: DevSecOps stands for "development, security, and operations." It "integrates security as a shared responsibility throughout the entire IT lifecycle."
+
+2. What is the first stage of the DevOps lifecycle? A) CODE B) BUILD C) IDEA D) DEPLOY 
+
+Correct Answer: C Explanation: The first stage of the DevOps lifecycle is the "IDEA" stage, where planning and scoping of new features take place.
+
+3. Which development practice is adopted in the CODE phase? A) Progressive integration B) Pair integration C) Test-driven development (TDD) D) Binary compiling 
+
+Correct Answer: C Explanation: During the CODE phase, "developers adopt best practices such as test-driven development (TDD)."
+
+4. What does the BUILD phase involve? A) Generating user feedback B) Integrating new code with the existing codebase C) Immediate deployment to production D) Strategic testing only 
+
+Correct Answer: B Explanation: The BUILD phase involves "integrating new code with the existing codebase and subjected to various tests."
+
+5. When does the DEPLOY phase of the DevOps lifecycle occur? A) Before testing B) After the BUILD phase C) After the IDEA phase D) Once the software is discontinued 
+
+Correct Answer: B Explanation: Continuous deployment in the DEPLOY phase "ensures that builds from the integration phase reach the appropriate environments."
+
+6. The MANAGE phase focuses primarily on what? A) Planning new features B) Ongoing monitoring and management C) Code development D) Software discontinuation 
+
+Correct Answer: B Explanation: After deployment, "the focus shifts to ongoing monitoring and management."
+
+7. What role does continuous testing play in the DevOps lifecycle? A) An interchangeable stage B) Isolated to the CODE phase C) Woven throughout every stage of the pipeline D) Conducted only during deployment 
+
+Correct Answer: C Explanation: "Testing is woven throughout every stage of the pipeline."
+
+8. What mentality does the DevSecOps paradigm adopt with respect to security? A) Shift right B) Shift center C) Shift left D) Shift up 
+
+Correct Answer: C Explanation: The DevSecOps paradigm adopts a "shift left" mentality, instilling security measures early on.
+
+9. What is an example of an automated security scanning tool mentioned in the text? A) Dynamic Application Security Testing (DAST) B) Binary Application Security Testing (BAST) C) Manual Application Security Testing (MAST) D) Simplified Application Security Testing (SAST) 
+
+Correct Answer: A Explanation: Tools such as "Static Application Security Testing (SAST), Dynamic Application Security Testing (DAST)" are used.
+
+10. What does infrastructure as code analysis examine? A) User feedback B) Development scripts and configurations C) Finalized software features D) Performance monitoring systems 
+
+Correct Answer: B Explanation: Infrastructure as code analysis examines "deployment scripts and configurations managed as code."
+
+11. What aspect of security does container security cover? A) Image distribution B) Examination of container images and orchestration C) Web browser security D) Office network security 
+
+Correct Answer: B Explanation: "Automated tools examine container images and orchestration for risks."
+
+12. What is the purpose of secrets management in DevSecOps? A) To store and manage credentials securely B) To encrypt the entire codebase C) To collect user secrets D) To optimize the storage space 
+
+Correct Answer: A Explanation: "Automated secrets management systems securely store and manage credentials."
+
+13. Why are automated compliance pipelines important? A) They eliminate the need for security. B) They ensure every build meets compliance standards. C) They speed up software delivery. D) They replace continuous testing. 
+
+Correct Answer: B Explanation: Pipeline templates are configured "to meet compliance standards."
+
+14. What is the "ADD" approach about in DevSecOps practices? A) Adding new members to the team B) Adding protective measures to features C) Increasing the software's functionality D) Increasing budget allocation 
+
+Correct Answer: B Explanation: The "ADD" approach involves "adding protective measures" to minimize risks associated with new features.
+
+15. When might the "REMOVE" approach be considered? A) When a new feature offers minimal value B) When a feature passes all security tests C) When a feature is crucial for business operations D) When a feature requires no deployment 
+
+Correct Answer: A Explanation: "If a new feature proves too risky or offers minimal value, the most straightforward approach might be to remove it entirely."
+
+16. What does automating security practices help to reduce? A) The development time for new features B) Human error C) System downtime D) Code complexity 
+
+Correct Answer: B Explanation: Automating security practices can "significantly reduce human error."
+
+17. According to the article, what ensures that every new feature is introduced with the necessary safeguards? A) Periodic assessments B) Integrating automated security processes within the DevOps lifecycle C) Manual security checks D) Feature rollbacks 
+
+Correct Answer: B Explanation: "Integrating automated security processes within the DevOps lifecycle" ensures the introduction of features with safeguards.
+
+18. What is one key takeaway from the article regarding DevSecOps? A) Security should be dealt with after deployment B) Security should be a secondary consideration C) Security should be an essential proactive component D) Security should be outsourced to specialized firms 
+
+Correct Answer: C Explanation: DevSecOps transforms security "from a secondary consideration to an essential, proactive component."
+
+19. The concept of 'shift left' promotes what? A) Delaying security measures to later stages B) Increasing the time for compliance checks C) Embedding security awareness early in all roles and stages D) Moving responsibility for security to a centralized team 
+
+Correct Answer: C Explanation: 'Shift left' promotes "embedding security awareness and responsibility...early in all roles and stages."
+
+20. Which of the following is not a direct benefit of integrating DevSecOps into the software development life cycle? A) Faster delivery speeds B) Lower security breach risks C) Immediate cost savings D) Improved compliance with regulatory requirements 
+
+Correct Answer: C Explanation: The article does not mention "immediate cost savings" as a direct benefit, but rather it discusses "early identification of risks and more cost-effective remediation," which implies long-term savings.
+
+# References
+
+- [What is DevSecOps? - YouTube](https://www.youtube.com/watch?v=J73MELGF6u0)
