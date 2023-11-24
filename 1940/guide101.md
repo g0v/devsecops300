@@ -36,8 +36,6 @@ Ultimately, when the addition of new features is essential, it is incumbent upon
 
 # QA
 
-# QA
-
 1. What does DevSecOps stand for? A) Development, Security, Optimization B) Development, Security, and Operations C) Development, Services, and Operations D) Development, Systems, and Operations 
 
 Correct Answer: B Explanation: DevSecOps stands for "development, security, and operations." It "integrates security as a shared responsibility throughout the entire IT lifecycle."
