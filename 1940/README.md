@@ -3,6 +3,7 @@
 - 101: [DevSecOps: Seamlessly Integrating Security into the Pipeline](./guide101.md)
 - 102: [DevSecOps from Zero to Hero: A Step-by-Step Guide to Avoid SQL Injection Vulnerabilities](./guide102.md)
 - 103: [DevSecOps ELI5 Guide from Zero to Hero: The Ultimate Step-by-Step Guide to Building an Invincible Fortress 🏰](./guide103.md)
+- 104: [DevSecOps: Shift Left Security](./guide104.md)
 
 # Why 1940?
 
