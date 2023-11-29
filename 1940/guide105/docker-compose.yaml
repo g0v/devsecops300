@@ -1,0 +1,67 @@
+name: givsor231128
+services:
+  box101:
+    image: busybox:1.35.0
+    runtime: runsc # using gVisor's runsc runtime
+    # https://gvisor.dev/docs/tutorials/docker-compose/
+    # All services must be on the same network to communicate.
+    network_mode: bridge
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "starting box101"
+        mkdir /www /www/cgi-bin /www/etc
+        cd /www
+        cat <<\EOOF > index.html
+        <html>
+          <head><title>HELLO123</title></head>
+          <body>HELLO123</body>
+        </html>
+        EOOF
+        # 
+        # NOTE: $$ to escape the $ dollar sign in a docker compose file
+        # 
+        cat <<\EOOF > /www/cgi-bin/page.sh
+        #!/bin/sh
+        echo "Content-Type: text/html"
+        echo ""
+        echo "$$QUERY_STRING"
+        THEPATH=$(echo "$$QUERY_STRING" | cut -d "=" -f 2)
+        echo "$$THEPATH"
+        cd ..
+        cat "$$THEPATH"
+        EOOF
+        chmod 700 /www/cgi-bin/page.sh
+        busybox httpd -fv -p 3000
+  box201:
+    image: curlimages/curl:7.86.0
+    runtime: runsc
+    # All services must be on the same network to communicate.
+    network_mode: bridge
+    # When using the "bridge" network specify links.
+    links:
+      - box101  # linking to the HTTP server container for communication 
+    command:
+      - sh
+      - -c
+      - |
+        sleep 3
+        curl -sv --retry 5 --retry-all-errors http://box101:3000/index.html
+        echo
+        curl -sv http://box101:3000/cgi-bin/page.sh?name=index.html
+        curl -sv http://box101:3000/cgi-bin/page.sh?name=../etc/passwd
+        sleep 1d
+  box301:
+    image: busybox:1.36.1
+    volumes:
+      - /tmp/runsc:/tmp/runsc:ro
+    command:
+      - sh
+      - -c
+      - |
+        sleep 5
+        grep "/etc/passwd" /tmp/runsc/* | grep "cat"
+        echo
+        grep "/etc/passwd" /tmp/runsc/* | egrep "curl.*read"
+        sleep 1d

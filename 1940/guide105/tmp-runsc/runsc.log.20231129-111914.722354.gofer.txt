@@ -1,0 +1,613 @@
+I1129 11:19:14.773612       1 main.go:189] ***************************
+I1129 11:19:14.773695       1 main.go:190] Args: [runsc-gofer --root=/var/run/docker/runtime-runc/moby --debug=true --log=/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/log.json --log-format=json --debug-log=/tmp/runsc/ --log-packets=true --strace=true --log-fd=3 --debug-log-fd=4 gofer --bundle /run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23 --gofer-mount-confs=lisafs:self,lisafs:none,lisafs:none,lisafs:none --spec-fd=5 --mounts-fd=6 --io-fds=7 --io-fds=8 --io-fds=9 --io-fds=10]
+I1129 11:19:14.773733       1 main.go:191] Version release-20231113.0
+I1129 11:19:14.773748       1 main.go:192] GOOS: linux
+I1129 11:19:14.773761       1 main.go:193] GOARCH: amd64
+I1129 11:19:14.773776       1 main.go:194] PID: 1
+I1129 11:19:14.773793       1 main.go:195] UID: 0, GID: 0
+I1129 11:19:14.773807       1 main.go:196] Configuration:
+I1129 11:19:14.773820       1 main.go:197] 		RootDir: /var/run/docker/runtime-runc/moby
+I1129 11:19:14.773834       1 main.go:198] 		Platform: systrap
+I1129 11:19:14.773848       1 main.go:199] 		FileAccess: exclusive
+I1129 11:19:14.773865       1 main.go:200] 		Directfs: true
+I1129 11:19:14.773879       1 main.go:201] 		Overlay: root:self
+I1129 11:19:14.773895       1 main.go:202] 		Network: sandbox, logging: true
+I1129 11:19:14.773911       1 main.go:203] 		Strace: true, max size: 1024, syscalls: 
+I1129 11:19:14.773939       1 main.go:204] 		IOURING: false
+I1129 11:19:14.773964       1 main.go:205] 		Debug: true
+I1129 11:19:14.773993       1 main.go:206] 		Systemd: false
+I1129 11:19:14.774008       1 main.go:207] ***************************
+W1129 11:19:14.775858       1 specutils.go:118] AppArmor profile "docker-default" is being ignored
+W1129 11:19:14.775909       1 specutils.go:124] noNewPrivileges ignored. PR_SET_NO_NEW_PRIVS is assumed to always be set.
+I1129 11:19:14.776371       1 gofer.go:500] Mounting src: "/var/lib/docker/containers/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/resolv.conf", dst: "/proc/root/etc/resolv.conf", flags: 0x5000
+I1129 11:19:14.776538       1 gofer.go:500] Mounting src: "/var/lib/docker/containers/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/hostname", dst: "/proc/root/etc/hostname", flags: 0x5000
+I1129 11:19:14.776692       1 gofer.go:500] Mounting src: "/var/lib/docker/containers/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/hosts", dst: "/proc/root/etc/hosts", flags: 0x5000
+I1129 11:19:14.776853       1 gofer.go:442] Create working directory "/" if needed
+I1129 11:19:14.776879       1 gofer.go:456] Remounting root as readonly: "/proc/root"
+I1129 11:19:14.778515       1 capability.go:66] Capabilities applied: { effective="chown, dac_override, dac_read_search, fowner, fsetid, sys_chroot" permitted="chown, dac_override, dac_read_search, fowner, fsetid, sys_chroot" inheritable="empty" bounding="chown, dac_override, dac_read_search, fowner, fsetid, sys_chroot" }
+I1129 11:19:14.778604       1 cmd.go:82] Execve "/proc/self/exe" again, bye!
+I1129 11:19:14.813999       1 main.go:189] ***************************
+I1129 11:19:14.814066       1 main.go:190] Args: [runsc-gofer --root=/var/run/docker/runtime-runc/moby --debug=true --log=/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/log.json --log-format=json --debug-log=/tmp/runsc/ --log-packets=true --strace=true --log-fd=3 --debug-log-fd=4 gofer --bundle=/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23 --gofer-mount-confs=lisafs:self,lisafs:none,lisafs:none,lisafs:none --io-fds=7,8,9,10 --mounts-fd=6 --spec-fd=5 --apply-caps=false --setup-root=false --sync-nvproxy-fd=-1 --sync-userns-fd=-1 --proc-mount-sync-fd=17]
+I1129 11:19:14.814104       1 main.go:191] Version release-20231113.0
+I1129 11:19:14.814118       1 main.go:192] GOOS: linux
+I1129 11:19:14.814148       1 main.go:193] GOARCH: amd64
+I1129 11:19:14.814164       1 main.go:194] PID: 1
+I1129 11:19:14.814181       1 main.go:195] UID: 0, GID: 0
+I1129 11:19:14.814196       1 main.go:196] Configuration:
+I1129 11:19:14.814210       1 main.go:197] 		RootDir: /var/run/docker/runtime-runc/moby
+I1129 11:19:14.814224       1 main.go:198] 		Platform: systrap
+I1129 11:19:14.814237       1 main.go:199] 		FileAccess: exclusive
+I1129 11:19:14.814254       1 main.go:200] 		Directfs: true
+I1129 11:19:14.814269       1 main.go:201] 		Overlay: root:self
+I1129 11:19:14.814285       1 main.go:202] 		Network: sandbox, logging: true
+I1129 11:19:14.814302       1 main.go:203] 		Strace: true, max size: 1024, syscalls: 
+I1129 11:19:14.814316       1 main.go:204] 		IOURING: false
+I1129 11:19:14.814331       1 main.go:205] 		Debug: true
+I1129 11:19:14.814344       1 main.go:206] 		Systemd: false
+I1129 11:19:14.814358       1 main.go:207] ***************************
+W1129 11:19:14.816277       1 specutils.go:118] AppArmor profile "docker-default" is being ignored
+W1129 11:19:14.816316       1 specutils.go:124] noNewPrivileges ignored. PR_SET_NO_NEW_PRIVS is assumed to always be set.
+D1129 11:19:14.816795       1 specutils.go:86] Spec:
+{
+  "ociVersion": "1.1.0-rc.2",
+  "process": {
+    "user": {
+      "uid": 0,
+      "gid": 0,
+      "additionalGids": [
+        0,
+        10
+      ]
+    },
+    "args": [
+      "/bin/sh",
+      "-c",
+      "echo \"starting box101\"\nmkdir /www /www/cgi-bin /www/etc\ncd /www\ncat \u003c\u003c\\EOOF \u003e index.html\n\u003chtml\u003e\n  \u003chead\u003e\u003ctitle\u003eHELLO123\u003c/title\u003e\u003c/head\u003e\n  \u003cbody\u003eHELLO123\u003c/body\u003e\n\u003c/html\u003e\nEOOF\n# \n# NOTE: $ to escape the $ dollar sign in a docker compose file\n# \ncat \u003c\u003c\\EOOF \u003e /www/cgi-bin/page.sh\n#!/bin/sh\necho \"Content-Type: text/html\"\necho \"\"\necho \"$QUERY_STRING\"\nTHEPATH=$(echo \"$QUERY_STRING\" | cut -d \"=\" -f 2)\necho \"$THEPATH\"\ncd ..\ncat \"$THEPATH\"\nEOOF\nchmod 700 /www/cgi-bin/page.sh\nbusybox httpd -fv -p 3000\n"
+    ],
+    "env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "HOSTNAME=2bb1fdfd8add"
+    ],
+    "cwd": "/",
+    "apparmorProfile": "docker-default",
+    "oomScoreAdj": 0
+  },
+  "root": {
+    "path": "/var/lib/docker/overlay2/0c1d119c37cda577b80922a9c16661e07c6b85c077180402de644dd000ab8ba5/merged"
+  },
+  "hostname": "2bb1fdfd8add",
+  "mounts": [
+    {
+      "destination": "/proc",
+      "type": "proc",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/proc",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/dev",
+      "type": "tmpfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/tmpfs",
+      "options": [
+        "nosuid",
+        "strictatime",
+        "mode=755",
+        "size=65536k"
+      ]
+    },
+    {
+      "destination": "/dev/pts",
+      "type": "devpts",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/devpts",
+      "options": [
+        "nosuid",
+        "noexec",
+        "newinstance",
+        "ptmxmode=0666",
+        "mode=0620",
+        "gid=5"
+      ]
+    },
+    {
+      "destination": "/sys",
+      "type": "sysfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/sysfs",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "ro"
+      ]
+    },
+    {
+      "destination": "/sys/fs/cgroup",
+      "type": "cgroup",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/cgroup",
+      "options": [
+        "ro",
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/dev/mqueue",
+      "type": "mqueue",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/mqueue",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/dev/shm",
+      "type": "tmpfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/shm",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "mode=1777",
+        "size=67108864"
+      ]
+    },
+    {
+      "destination": "/etc/resolv.conf",
+      "type": "bind",
+      "source": "/var/lib/docker/containers/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/resolv.conf",
+      "options": [
+        "rbind",
+        "rprivate"
+      ]
+    },
+    {
+      "destination": "/etc/hostname",
+      "type": "bind",
+      "source": "/var/lib/docker/containers/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/hostname",
+      "options": [
+        "rbind",
+        "rprivate"
+      ]
+    },
+    {
+      "destination": "/etc/hosts",
+      "type": "bind",
+      "source": "/var/lib/docker/containers/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/hosts",
+      "options": [
+        "rbind",
+        "rprivate"
+      ]
+    }
+  ],
+  "hooks": {
+    "prestart": [
+      {
+        "path": "/proc/1653/exe",
+        "args": [
+          "libnetwork-setkey",
+          "-exec-root=/var/run/docker",
+          "2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23",
+          "340c13aa861e"
+        ]
+      }
+    ]
+  },
+  "linux": {
+    "sysctl": {
+      "net.ipv4.ip_unprivileged_port_start": "0",
+      "net.ipv4.ping_group_range": "0 2147483647"
+    },
+    "resources": {
+      "memory": {
+        "disableOOMKiller": false
+      },
+      "blockIO": {}
+    },
+    "cgroupsPath": "/docker/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23",
+    "namespaces": [
+      {
+        "type": "mount"
+      },
+      {
+        "type": "network"
+      },
+      {
+        "type": "uts"
+      },
+      {
+        "type": "pid"
+      },
+      {
+        "type": "ipc"
+      }
+    ]
+  }
+}
+I1129 11:19:14.823140       1 gofer.go:235] Process chroot'd to "/root"
+I1129 11:19:14.823184       1 seccomp.go:61] Installing seccomp filters for 59 syscalls (action=kill process)
+D1129 11:19:14.823449       1 seccomp.go:426] syscall filter read: true => 0x616c6c6f77
+D1129 11:19:14.823481       1 seccomp.go:426] syscall filter write: true => 0x616c6c6f77
+D1129 11:19:14.823496       1 seccomp.go:426] syscall filter close: true => 0x616c6c6f77
+D1129 11:19:14.823508       1 seccomp.go:426] syscall filter fstat: true => 0x616c6c6f77
+D1129 11:19:14.823521       1 seccomp.go:426] syscall filter lseek: true => 0x616c6c6f77
+D1129 11:19:14.823533       1 seccomp.go:426] syscall filter mmap: (arg0 == * && arg1 == * && arg2 & 0x4 == 0x4) => 0x6b696c6c2070726f63657373
+D1129 11:19:14.823555       1 seccomp.go:426] syscall filter mmap: ((arg0 == * && arg1 == * && arg2 == * && arg3 == 0x1) || (arg0 == * && arg1 == * && arg2 == * && arg3 == 0x22) || (arg0 == * && arg1 == * && arg2 == * && arg3 == 0x32)) => 0x616c6c6f77
+D1129 11:19:14.823577       1 seccomp.go:426] syscall filter mprotect: (arg0 == * && arg1 == * && arg2 & 0x4 == 0x4) => 0x6b696c6c2070726f63657373
+D1129 11:19:14.823602       1 seccomp.go:426] syscall filter mprotect: true => 0x616c6c6f77
+D1129 11:19:14.823615       1 seccomp.go:426] syscall filter munmap: true => 0x616c6c6f77
+D1129 11:19:14.823647       1 seccomp.go:426] syscall filter rt_sigaction: true => 0x616c6c6f77
+D1129 11:19:14.823659       1 seccomp.go:426] syscall filter rt_sigprocmask: true => 0x616c6c6f77
+D1129 11:19:14.823672       1 seccomp.go:426] syscall filter rt_sigreturn: true => 0x616c6c6f77
+D1129 11:19:14.823684       1 seccomp.go:426] syscall filter pread64: true => 0x616c6c6f77
+D1129 11:19:14.823696       1 seccomp.go:426] syscall filter pwrite64: true => 0x616c6c6f77
+D1129 11:19:14.823709       1 seccomp.go:426] syscall filter sched_yield: true => 0x616c6c6f77
+D1129 11:19:14.823734       1 seccomp.go:426] syscall filter madvise: true => 0x616c6c6f77
+D1129 11:19:14.823747       1 seccomp.go:426] syscall filter dup: true => 0x616c6c6f77
+D1129 11:19:14.823760       1 seccomp.go:426] syscall filter nanosleep: true => 0x616c6c6f77
+D1129 11:19:14.823773       1 seccomp.go:426] syscall filter getpid: true => 0x616c6c6f77
+D1129 11:19:14.823785       1 seccomp.go:426] syscall filter accept: true => 0x616c6c6f77
+D1129 11:19:14.823803       1 seccomp.go:426] syscall filter sendmsg: ((arg0 == * && arg1 == * && arg2 == 0x0) || (arg0 == * && arg1 == * && arg2 == 0x4040)) => 0x616c6c6f77
+D1129 11:19:14.823832       1 seccomp.go:426] syscall filter recvmsg: ((arg0 == * && arg1 == * && arg2 == 0x60) || (arg0 == * && arg1 == * && arg2 == 0x62)) => 0x616c6c6f77
+D1129 11:19:14.823855       1 seccomp.go:426] syscall filter shutdown: (arg0 == * && arg1 == 0x2) => 0x616c6c6f77
+D1129 11:19:14.823877       1 seccomp.go:426] syscall filter socketpair: (arg0 == 0x1 && arg1 == 0x80005 && arg2 == 0x0) => 0x616c6c6f77
+D1129 11:19:14.823901       1 seccomp.go:426] syscall filter clone: (arg0 == 0xd0f00 && arg1 == * && arg2 == 0x0 && arg3 == 0x0) => 0x616c6c6f77
+D1129 11:19:14.823924       1 seccomp.go:426] syscall filter exit: true => 0x616c6c6f77
+D1129 11:19:14.823945       1 seccomp.go:426] syscall filter fcntl: ((arg0 == * && arg1 == 0x3) || (arg0 == * && arg1 == 0x4) || (arg0 == * && arg1 == 0x1) || (arg0 == * && arg1 == 0x409)) => 0x616c6c6f77
+D1129 11:19:14.823983       1 seccomp.go:426] syscall filter fsync: true => 0x616c6c6f77
+D1129 11:19:14.824004       1 seccomp.go:426] syscall filter ftruncate: true => 0x616c6c6f77
+D1129 11:19:14.824028       1 seccomp.go:426] syscall filter fchmod: true => 0x616c6c6f77
+D1129 11:19:14.824051       1 seccomp.go:426] syscall filter gettimeofday: true => 0x616c6c6f77
+D1129 11:19:14.824072       1 seccomp.go:426] syscall filter sigaltstack: true => 0x616c6c6f77
+D1129 11:19:14.824094       1 seccomp.go:426] syscall filter fstatfs: true => 0x616c6c6f77
+D1129 11:19:14.824106       1 seccomp.go:426] syscall filter gettid: true => 0x616c6c6f77
+D1129 11:19:14.824119       1 seccomp.go:426] syscall filter futex: ((arg0 == * && arg1 == 0x80 && arg2 == * && arg3 == * && arg4 == 0x0) || (arg0 == * && arg1 == 0x81 && arg2 == * && arg3 == * && arg4 == 0x0) || (arg0 == * && arg1 == 0x0) || (arg0 == * && arg1 == 0x1)) => 0x616c6c6f77
+D1129 11:19:14.824152       1 seccomp.go:426] syscall filter getdents64: true => 0x616c6c6f77
+D1129 11:19:14.824165       1 seccomp.go:426] syscall filter restart_syscall: true => 0x616c6c6f77
+D1129 11:19:14.824178       1 seccomp.go:426] syscall filter clock_gettime: true => 0x616c6c6f77
+D1129 11:19:14.824190       1 seccomp.go:426] syscall filter exit_group: true => 0x616c6c6f77
+D1129 11:19:14.824203       1 seccomp.go:426] syscall filter epoll_ctl: true => 0x616c6c6f77
+D1129 11:19:14.824215       1 seccomp.go:426] syscall filter tgkill: arg0 == 0x1 => 0x616c6c6f77
+D1129 11:19:14.824228       1 seccomp.go:426] syscall filter openat: true => 0x616c6c6f77
+D1129 11:19:14.824241       1 seccomp.go:426] syscall filter mkdirat: true => 0x616c6c6f77
+D1129 11:19:14.824253       1 seccomp.go:426] syscall filter mknodat: true => 0x616c6c6f77
+D1129 11:19:14.824267       1 seccomp.go:426] syscall filter fchownat: true => 0x616c6c6f77
+D1129 11:19:14.824299       1 seccomp.go:426] syscall filter newfstatat: true => 0x616c6c6f77
+D1129 11:19:14.824320       1 seccomp.go:426] syscall filter unlinkat: true => 0x616c6c6f77
+D1129 11:19:14.824341       1 seccomp.go:426] syscall filter renameat: true => 0x616c6c6f77
+D1129 11:19:14.824361       1 seccomp.go:426] syscall filter linkat: true => 0x616c6c6f77
+D1129 11:19:14.824382       1 seccomp.go:426] syscall filter symlinkat: true => 0x616c6c6f77
+D1129 11:19:14.824405       1 seccomp.go:426] syscall filter readlinkat: true => 0x616c6c6f77
+D1129 11:19:14.824429       1 seccomp.go:426] syscall filter fchmodat: true => 0x616c6c6f77
+D1129 11:19:14.824448       1 seccomp.go:426] syscall filter ppoll: true => 0x616c6c6f77
+D1129 11:19:14.824477       1 seccomp.go:426] syscall filter utimensat: true => 0x616c6c6f77
+D1129 11:19:14.824495       1 seccomp.go:426] syscall filter epoll_pwait: (arg0 == * && arg1 == * && arg2 == * && arg3 == * && arg4 == 0x0) => 0x616c6c6f77
+D1129 11:19:14.824515       1 seccomp.go:426] syscall filter fallocate: (arg0 == * && arg1 == 0x0) => 0x616c6c6f77
+D1129 11:19:14.824533       1 seccomp.go:426] syscall filter eventfd2: (arg0 == 0x0 && arg1 == 0x0) => 0x616c6c6f77
+D1129 11:19:14.824552       1 seccomp.go:426] syscall filter getcpu: (arg0 == * && arg1 == 0x0 && arg2 == 0x0) => 0x616c6c6f77
+D1129 11:19:14.824571       1 seccomp.go:426] syscall filter getrandom: true => 0x616c6c6f77
+D1129 11:19:14.824588       1 seccomp.go:426] syscall filter memfd_create: true => 0x616c6c6f77
+D1129 11:19:14.841911       1 seccomp.go:391] Seccomp program optimized from 743 to 307 instructions; took 17.91495ms to build and 593.513µs to optimize
+D1129 11:19:14.842275       1 seccomp.go:78] Seccomp program dump:
+0: A <- P[4:4]
+1: pc += (A == 3221225534) ? 1 [3] : 0 [2]
+2: ret 2147483648
+3: A <- P[0:4]
+4: pc += (A >= 96) ? 0 [5] : 2 [7]
+5: pc += (A > 96) ? 179 [185] : 0 [6]
+6: ret 2147418112
+7: pc += (A >= 28) ? 0 [8] : 2 [10]
+8: pc += (A > 28) ? 67 [76] : 0 [9]
+9: ret 2147418112
+10: pc += (A >= 11) ? 0 [11] : 2 [13]
+11: pc += (A > 11) ? 45 [57] : 0 [12]
+12: ret 2147418112
+13: pc += (A >= 5) ? 0 [14] : 2 [16]
+14: pc += (A > 5) ? 8 [23] : 0 [15]
+15: ret 2147418112
+16: pc += (A >= 1) ? 0 [17] : 2 [19]
+17: pc += (A > 1) ? 2 [20] : 0 [18]
+18: ret 2147418112
+19: ret 2147418112
+20: pc += (A == 3) ? 1 [22] : 0 [21]
+21: ret 2147483648
+22: ret 2147418112
+23: pc += (A >= 9) ? 0 [24] : 22 [46]
+24: pc += (A > 9) ? 24 [49] : 0 [25]
+25: A <- P[32:4]
+26: A <- A & 4
+27: pc += (A == 4) ? 0 [28] : 4 [32]
+28: A <- P[36:4]
+29: A <- A & 0
+30: pc += (A == 0) ? 0 [31] : 1 [32]
+31: ret 2147483648
+32: A <- P[40:4]
+33: pc += (A == 1) ? 0 [34] : 2 [36]
+34: A <- P[44:4]
+35: pc += (A == 0) ? 8 [44] : 0 [36]
+36: A <- P[40:4]
+37: pc += (A == 34) ? 0 [38] : 2 [40]
+38: A <- P[44:4]
+39: pc += (A == 0) ? 4 [44] : 0 [40]
+40: A <- P[40:4]
+41: pc += (A == 50) ? 0 [42] : 3 [45]
+42: A <- P[44:4]
+43: pc += (A == 0) ? 0 [44] : 1 [45]
+44: ret 2147418112
+45: ret 2147483648
+46: pc += (A == 8) ? 1 [48] : 0 [47]
+47: ret 2147483648
+48: ret 2147418112
+49: A <- P[32:4]
+50: A <- A & 4
+51: pc += (A == 4) ? 0 [52] : 4 [56]
+52: A <- P[36:4]
+53: A <- A & 0
+54: pc += (A == 0) ? 0 [55] : 1 [56]
+55: ret 2147483648
+56: ret 2147418112
+57: pc += (A >= 17) ? 0 [58] : 2 [60]
+58: pc += (A > 17) ? 10 [69] : 0 [59]
+59: ret 2147418112
+60: pc += (A >= 14) ? 0 [61] : 2 [63]
+61: pc += (A > 14) ? 4 [66] : 0 [62]
+62: ret 2147418112
+63: pc += (A == 13) ? 1 [65] : 0 [64]
+64: ret 2147483648
+65: ret 2147418112
+66: pc += (A == 15) ? 1 [68] : 0 [67]
+67: ret 2147483648
+68: ret 2147418112
+69: pc += (A >= 24) ? 0 [70] : 3 [73]
+70: pc += (A == 24) ? 1 [72] : 0 [71]
+71: ret 2147483648
+72: ret 2147418112
+73: pc += (A == 18) ? 1 [75] : 0 [74]
+74: ret 2147483648
+75: ret 2147418112
+76: pc += (A >= 53) ? 0 [77] : 15 [92]
+77: pc += (A > 53) ? 58 [136] : 0 [78]
+78: A <- P[16:4]
+79: pc += (A == 1) ? 0 [80] : 11 [91]
+80: A <- P[20:4]
+81: pc += (A == 0) ? 0 [82] : 9 [91]
+82: A <- P[24:4]
+83: pc += (A == 524293) ? 0 [84] : 7 [91]
+84: A <- P[28:4]
+85: pc += (A == 0) ? 0 [86] : 5 [91]
+86: A <- P[32:4]
+87: pc += (A == 0) ? 0 [88] : 3 [91]
+88: A <- P[36:4]
+89: pc += (A == 0) ? 0 [90] : 1 [91]
+90: ret 2147418112
+91: ret 2147483648
+92: pc += (A >= 43) ? 0 [93] : 2 [95]
+93: pc += (A > 43) ? 10 [104] : 0 [94]
+94: ret 2147418112
+95: pc += (A >= 35) ? 0 [96] : 2 [98]
+96: pc += (A > 35) ? 4 [101] : 0 [97]
+97: ret 2147418112
+98: pc += (A == 32) ? 1 [100] : 0 [99]
+99: ret 2147483648
+100: ret 2147418112
+101: pc += (A == 39) ? 1 [103] : 0 [102]
+102: ret 2147483648
+103: ret 2147418112
+104: pc += (A >= 47) ? 0 [105] : 11 [116]
+105: pc += (A > 47) ? 22 [128] : 0 [106]
+106: A <- P[32:4]
+107: pc += (A == 96) ? 0 [108] : 2 [110]
+108: A <- P[36:4]
+109: pc += (A == 0) ? 4 [114] : 0 [110]
+110: A <- P[32:4]
+111: pc += (A == 98) ? 0 [112] : 3 [115]
+112: A <- P[36:4]
+113: pc += (A == 0) ? 0 [114] : 1 [115]
+114: ret 2147418112
+115: ret 2147483648
+116: pc += (A == 46) ? 1 [118] : 0 [117]
+117: ret 2147483648
+118: A <- P[32:4]
+119: pc += (A == 0) ? 0 [120] : 2 [122]
+120: A <- P[36:4]
+121: pc += (A == 0) ? 4 [126] : 0 [122]
+122: A <- P[32:4]
+123: pc += (A == 16448) ? 0 [124] : 3 [127]
+124: A <- P[36:4]
+125: pc += (A == 0) ? 0 [126] : 1 [127]
+126: ret 2147418112
+127: ret 2147483648
+128: pc += (A == 48) ? 1 [130] : 0 [129]
+129: ret 2147483648
+130: A <- P[24:4]
+131: pc += (A == 2) ? 0 [132] : 3 [135]
+132: A <- P[28:4]
+133: pc += (A == 0) ? 0 [134] : 1 [135]
+134: ret 2147418112
+135: ret 2147483648
+136: pc += (A >= 74) ? 0 [137] : 2 [139]
+137: pc += (A > 74) ? 40 [178] : 0 [138]
+138: ret 2147418112
+139: pc += (A >= 60) ? 0 [140] : 2 [142]
+140: pc += (A > 60) ? 17 [158] : 0 [141]
+141: ret 2147418112
+142: pc += (A == 56) ? 1 [144] : 0 [143]
+143: ret 2147483648
+144: A <- P[16:4]
+145: pc += (A == 855808) ? 0 [146] : 11 [157]
+146: A <- P[20:4]
+147: pc += (A == 0) ? 0 [148] : 9 [157]
+148: A <- P[32:4]
+149: pc += (A == 0) ? 0 [150] : 7 [157]
+150: A <- P[36:4]
+151: pc += (A == 0) ? 0 [152] : 5 [157]
+152: A <- P[40:4]
+153: pc += (A == 0) ? 0 [154] : 3 [157]
+154: A <- P[44:4]
+155: pc += (A == 0) ? 0 [156] : 1 [157]
+156: ret 2147418112
+157: ret 2147483648
+158: pc += (A == 72) ? 1 [160] : 0 [159]
+159: ret 2147483648
+160: A <- P[24:4]
+161: pc += (A == 3) ? 0 [162] : 2 [164]
+162: A <- P[28:4]
+163: pc += (A == 0) ? 12 [176] : 0 [164]
+164: A <- P[24:4]
+165: pc += (A == 4) ? 0 [166] : 2 [168]
+166: A <- P[28:4]
+167: pc += (A == 0) ? 8 [176] : 0 [168]
+168: A <- P[24:4]
+169: pc += (A == 1) ? 0 [170] : 2 [172]
+170: A <- P[28:4]
+171: pc += (A == 0) ? 4 [176] : 0 [172]
+172: A <- P[24:4]
+173: pc += (A == 1033) ? 0 [174] : 3 [177]
+174: A <- P[28:4]
+175: pc += (A == 0) ? 0 [176] : 1 [177]
+176: ret 2147418112
+177: ret 2147483648
+178: pc += (A >= 91) ? 0 [179] : 3 [182]
+179: pc += (A == 91) ? 1 [181] : 0 [180]
+180: ret 2147483648
+181: ret 2147418112
+182: pc += (A == 77) ? 1 [184] : 0 [183]
+183: ret 2147483648
+184: ret 2147418112
+185: pc += (A >= 262) ? 0 [186] : 2 [188]
+186: pc += (A > 262) ? 63 [250] : 0 [187]
+187: ret 2147418112
+188: pc += (A >= 231) ? 0 [189] : 2 [191]
+189: pc += (A > 231) ? 42 [232] : 0 [190]
+190: ret 2147418112
+191: pc += (A >= 202) ? 0 [192] : 26 [218]
+192: pc += (A > 202) ? 32 [225] : 0 [193]
+193: A <- P[24:4]
+194: pc += (A == 128) ? 0 [195] : 6 [201]
+195: A <- P[28:4]
+196: pc += (A == 0) ? 0 [197] : 4 [201]
+197: A <- P[48:4]
+198: pc += (A == 0) ? 0 [199] : 2 [201]
+199: A <- P[52:4]
+200: pc += (A == 0) ? 16 [217] : 0 [201]
+201: A <- P[24:4]
+202: pc += (A == 129) ? 0 [203] : 6 [209]
+203: A <- P[28:4]
+204: pc += (A == 0) ? 0 [205] : 4 [209]
+205: A <- P[48:4]
+206: pc += (A == 0) ? 0 [207] : 2 [209]
+207: A <- P[52:4]
+208: pc += (A == 0) ? 8 [217] : 0 [209]
+209: A <- P[24:4]
+210: pc += (A == 0) ? 0 [211] : 2 [213]
+211: A <- P[28:4]
+212: pc += (A == 0) ? 4 [217] : 0 [213]
+213: A <- P[24:4]
+214: pc += (A == 1) ? 0 [215] : 91 [306]
+215: A <- P[28:4]
+216: pc += (A == 0) ? 0 [217] : 89 [306]
+217: ret 2147418112
+218: pc += (A >= 138) ? 0 [219] : 2 [221]
+219: pc += (A > 138) ? 3 [223] : 0 [220]
+220: ret 2147418112
+221: pc += (A == 131) ? 0 [222] : 84 [306]
+222: ret 2147418112
+223: pc += (A == 186) ? 0 [224] : 82 [306]
+224: ret 2147418112
+225: pc += (A >= 219) ? 0 [226] : 2 [228]
+226: pc += (A > 219) ? 3 [230] : 0 [227]
+227: ret 2147418112
+228: pc += (A == 217) ? 0 [229] : 77 [306]
+229: ret 2147418112
+230: pc += (A == 228) ? 0 [231] : 75 [306]
+231: ret 2147418112
+232: pc += (A >= 258) ? 0 [233] : 2 [235]
+233: pc += (A > 258) ? 12 [246] : 0 [234]
+234: ret 2147418112
+235: pc += (A >= 234) ? 0 [236] : 6 [242]
+236: pc += (A > 234) ? 7 [244] : 0 [237]
+237: A <- P[16:4]
+238: pc += (A == 1) ? 0 [239] : 67 [306]
+239: A <- P[20:4]
+240: pc += (A == 0) ? 0 [241] : 65 [306]
+241: ret 2147418112
+242: pc += (A == 233) ? 0 [243] : 63 [306]
+243: ret 2147418112
+244: pc += (A == 257) ? 0 [245] : 61 [306]
+245: ret 2147418112
+246: pc += (A >= 260) ? 0 [247] : 2 [249]
+247: pc += (A == 260) ? 0 [248] : 58 [306]
+248: ret 2147418112
+249: ret 2147418112
+250: pc += (A >= 280) ? 0 [251] : 2 [253]
+251: pc += (A > 280) ? 15 [267] : 0 [252]
+252: ret 2147418112
+253: pc += (A >= 266) ? 0 [254] : 2 [256]
+254: pc += (A > 266) ? 6 [261] : 0 [255]
+255: ret 2147418112
+256: pc += (A >= 264) ? 0 [257] : 2 [259]
+257: pc += (A > 264) ? 2 [260] : 0 [258]
+258: ret 2147418112
+259: ret 2147418112
+260: ret 2147418112
+261: pc += (A >= 268) ? 0 [262] : 2 [264]
+262: pc += (A > 268) ? 2 [265] : 0 [263]
+263: ret 2147418112
+264: ret 2147418112
+265: pc += (A == 271) ? 0 [266] : 40 [306]
+266: ret 2147418112
+267: pc += (A >= 309) ? 0 [268] : 10 [278]
+268: pc += (A > 309) ? 32 [301] : 0 [269]
+269: A <- P[24:4]
+270: pc += (A == 0) ? 0 [271] : 35 [306]
+271: A <- P[28:4]
+272: pc += (A == 0) ? 0 [273] : 33 [306]
+273: A <- P[32:4]
+274: pc += (A == 0) ? 0 [275] : 31 [306]
+275: A <- P[36:4]
+276: pc += (A == 0) ? 0 [277] : 29 [306]
+277: ret 2147418112
+278: pc += (A >= 285) ? 0 [279] : 6 [285]
+279: pc += (A > 285) ? 11 [291] : 0 [280]
+280: A <- P[24:4]
+281: pc += (A == 0) ? 0 [282] : 24 [306]
+282: A <- P[28:4]
+283: pc += (A == 0) ? 0 [284] : 22 [306]
+284: ret 2147418112
+285: pc += (A == 281) ? 0 [286] : 20 [306]
+286: A <- P[48:4]
+287: pc += (A == 0) ? 0 [288] : 18 [306]
+288: A <- P[52:4]
+289: pc += (A == 0) ? 0 [290] : 16 [306]
+290: ret 2147418112
+291: pc += (A == 290) ? 0 [292] : 14 [306]
+292: A <- P[16:4]
+293: pc += (A == 0) ? 0 [294] : 12 [306]
+294: A <- P[20:4]
+295: pc += (A == 0) ? 0 [296] : 10 [306]
+296: A <- P[24:4]
+297: pc += (A == 0) ? 0 [298] : 8 [306]
+298: A <- P[28:4]
+299: pc += (A == 0) ? 0 [300] : 6 [306]
+300: ret 2147418112
+301: pc += (A >= 319) ? 0 [302] : 2 [304]
+302: pc += (A == 319) ? 0 [303] : 3 [306]
+303: ret 2147418112
+304: pc += (A == 318) ? 0 [305] : 1 [306]
+305: ret 2147418112
+306: ret 2147483648
+
+I1129 11:19:14.842796       1 seccomp.go:89] Seccomp filters installed.
+I1129 11:19:14.842844       1 gofer.go:282] Serving "/" mapped to "/root" on FD 7 (ro: true)
+I1129 11:19:14.842871       1 gofer.go:311] Serving "/etc/resolv.conf" mapped on FD 8 (ro: false)
+I1129 11:19:14.842896       1 gofer.go:311] Serving "/etc/hostname" mapped on FD 9 (ro: false)
+I1129 11:19:14.842920       1 gofer.go:311] Serving "/etc/hosts" mapped on FD 10 (ro: false)
+D1129 11:28:41.813517       1 connection.go:127] sock read failed, closing connection: EOF
+D1129 11:28:41.813548       1 connection.go:127] sock read failed, closing connection: EOF
+D1129 11:28:41.813684       1 connection.go:127] sock read failed, closing connection: EOF
+D1129 11:28:41.813819       1 connection.go:127] sock read failed, closing connection: EOF
+I1129 11:28:41.813849       1 gofer.go:335] All lisafs servers exited.
+I1129 11:28:41.813867       1 main.go:224] Exiting with status: 0

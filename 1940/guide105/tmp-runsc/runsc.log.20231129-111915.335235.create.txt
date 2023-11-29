@@ -1,0 +1,335 @@
+I1129 11:19:15.335274   29006 main.go:189] ***************************
+I1129 11:19:15.335304   29006 main.go:190] Args: [/usr/bin/runsc --debug-log=/tmp/runsc/ --debug --log-packets --strace --root /var/run/docker/runtime-runc/moby --log /run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/log.json --log-format json create --bundle /run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d --pid-file /run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/init.pid 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d]
+I1129 11:19:15.335323   29006 main.go:191] Version release-20231113.0
+I1129 11:19:15.335331   29006 main.go:192] GOOS: linux
+I1129 11:19:15.335339   29006 main.go:193] GOARCH: amd64
+I1129 11:19:15.335347   29006 main.go:194] PID: 29006
+I1129 11:19:15.335356   29006 main.go:195] UID: 0, GID: 0
+I1129 11:19:15.335364   29006 main.go:196] Configuration:
+I1129 11:19:15.335372   29006 main.go:197] 		RootDir: /var/run/docker/runtime-runc/moby
+I1129 11:19:15.335379   29006 main.go:198] 		Platform: systrap
+I1129 11:19:15.335387   29006 main.go:199] 		FileAccess: exclusive
+I1129 11:19:15.335397   29006 main.go:200] 		Directfs: true
+I1129 11:19:15.335405   29006 main.go:201] 		Overlay: root:self
+I1129 11:19:15.335414   29006 main.go:202] 		Network: sandbox, logging: true
+I1129 11:19:15.335423   29006 main.go:203] 		Strace: true, max size: 1024, syscalls: 
+I1129 11:19:15.335431   29006 main.go:204] 		IOURING: false
+I1129 11:19:15.335439   29006 main.go:205] 		Debug: true
+I1129 11:19:15.335447   29006 main.go:206] 		Systemd: false
+I1129 11:19:15.335458   29006 main.go:207] ***************************
+W1129 11:19:15.336499   29006 specutils.go:118] AppArmor profile "docker-default" is being ignored
+W1129 11:19:15.336516   29006 specutils.go:124] noNewPrivileges ignored. PR_SET_NO_NEW_PRIVS is assumed to always be set.
+D1129 11:19:15.336659   29006 specutils.go:86] Spec:
+{
+  "ociVersion": "1.1.0-rc.2",
+  "process": {
+    "user": {
+      "uid": 100,
+      "gid": 101,
+      "additionalGids": [
+        101,
+        101
+      ]
+    },
+    "args": [
+      "/entrypoint.sh",
+      "sh",
+      "-c",
+      "sleep 3\ncurl -sv --retry 5 --retry-all-errors http://box101:3000/index.html\necho\ncurl -sv http://box101:3000/cgi-bin/page.sh?name=index.html\ncurl -sv http://box101:3000/cgi-bin/page.sh?name=../etc/passwd\nsleep 1d"
+    ],
+    "env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "HOSTNAME=1356943558b5",
+      "GIVSOR231128_BOX101_1_NAME=/givsor231128-box201-1/givsor231128-box101-1",
+      "BOX101_NAME=/givsor231128-box201-1/box101",
+      "BOX101_1_NAME=/givsor231128-box201-1/box101-1",
+      "CURL_VERSION=7_86_0",
+      "CURL_RELEASE_TAG=curl-7_86_0",
+      "CURL_GIT_REPO=https://github.com/curl/curl.git",
+      "CURL_CA_BUNDLE=/cacert.pem"
+    ],
+    "cwd": "/",
+    "apparmorProfile": "docker-default",
+    "oomScoreAdj": 0
+  },
+  "root": {
+    "path": "/var/lib/docker/overlay2/b9fb9f6066e80226abdbc70bcaa685393884ced9da82984692f2a19de07b3300/merged"
+  },
+  "hostname": "1356943558b5",
+  "mounts": [
+    {
+      "destination": "/proc",
+      "type": "proc",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/proc",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/dev",
+      "type": "tmpfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/tmpfs",
+      "options": [
+        "nosuid",
+        "strictatime",
+        "mode=755",
+        "size=65536k"
+      ]
+    },
+    {
+      "destination": "/dev/pts",
+      "type": "devpts",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/devpts",
+      "options": [
+        "nosuid",
+        "noexec",
+        "newinstance",
+        "ptmxmode=0666",
+        "mode=0620",
+        "gid=5"
+      ]
+    },
+    {
+      "destination": "/sys",
+      "type": "sysfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/sysfs",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "ro"
+      ]
+    },
+    {
+      "destination": "/sys/fs/cgroup",
+      "type": "cgroup",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup",
+      "options": [
+        "ro",
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/dev/mqueue",
+      "type": "mqueue",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/mqueue",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/dev/shm",
+      "type": "tmpfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/shm",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "mode=1777",
+        "size=67108864"
+      ]
+    },
+    {
+      "destination": "/etc/resolv.conf",
+      "type": "bind",
+      "source": "/var/lib/docker/containers/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/resolv.conf",
+      "options": [
+        "rbind",
+        "rprivate"
+      ]
+    },
+    {
+      "destination": "/etc/hostname",
+      "type": "bind",
+      "source": "/var/lib/docker/containers/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/hostname",
+      "options": [
+        "rbind",
+        "rprivate"
+      ]
+    },
+    {
+      "destination": "/etc/hosts",
+      "type": "bind",
+      "source": "/var/lib/docker/containers/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/hosts",
+      "options": [
+        "rbind",
+        "rprivate"
+      ]
+    }
+  ],
+  "hooks": {
+    "prestart": [
+      {
+        "path": "/proc/1653/exe",
+        "args": [
+          "libnetwork-setkey",
+          "-exec-root=/var/run/docker",
+          "1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d",
+          "340c13aa861e"
+        ]
+      }
+    ]
+  },
+  "linux": {
+    "sysctl": {
+      "net.ipv4.ip_unprivileged_port_start": "0",
+      "net.ipv4.ping_group_range": "0 2147483647"
+    },
+    "resources": {
+      "memory": {
+        "disableOOMKiller": false
+      },
+      "blockIO": {}
+    },
+    "cgroupsPath": "/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d",
+    "namespaces": [
+      {
+        "type": "mount"
+      },
+      {
+        "type": "network"
+      },
+      {
+        "type": "uts"
+      },
+      {
+        "type": "pid"
+      },
+      {
+        "type": "ipc"
+      }
+    ]
+  }
+}
+D1129 11:19:15.336688   29006 container.go:198] Create container, cid: 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d, rootDir: "/var/run/docker/runtime-runc/moby"
+D1129 11:19:15.336721   29006 container.go:1761] Configuring container with a new userns with identity user mappings into current userns
+D1129 11:19:15.336757   29006 container.go:1817] UID Mappings:
+D1129 11:19:15.336765   29006 container.go:1819] 	Container ID: 0, Host ID: 0, Range Length: 4294967295
+D1129 11:19:15.336787   29006 container.go:1817] GID Mappings:
+D1129 11:19:15.336794   29006 container.go:1819] 	Container ID: 0, Host ID: 0, Range Length: 4294967295
+D1129 11:19:15.336826   29006 container.go:260] Creating new sandbox for container, cid: 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d
+D1129 11:19:15.336842   29006 cgroup.go:410] New cgroup for pid: self, *cgroup.cgroupV1: &{Name:/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d Parents:map[] Own:map[]}
+D1129 11:19:15.336865   29006 cgroup.go:483] Installing cgroup path "/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.336944   29006 cgroup.go:539] Creating cgroup "blkio": "/sys/fs/cgroup/blkio/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.336986   29006 cgroup.go:539] Creating cgroup "cpuset": "/sys/fs/cgroup/cpuset/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373524   29006 cgroup.go:539] Creating cgroup "freezer": "/sys/fs/cgroup/freezer/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373621   29006 cgroup.go:539] Creating cgroup "systemd": "/sys/fs/cgroup/systemd/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373659   29006 cgroup.go:539] Creating cgroup "hugetlb": "/sys/fs/cgroup/hugetlb/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373706   29006 cgroup.go:539] Creating cgroup "memory": "/sys/fs/cgroup/memory/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373769   29006 cgroup.go:539] Creating cgroup "cpuacct": "/sys/fs/cgroup/cpuacct/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373830   29006 cgroup.go:539] Creating cgroup "net_cls": "/sys/fs/cgroup/net_cls/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373864   29006 cgroup.go:539] Creating cgroup "net_prio": "/sys/fs/cgroup/net_prio/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373884   29006 cgroup.go:539] Creating cgroup "devices": "/sys/fs/cgroup/devices/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373911   29006 cgroup.go:539] Creating cgroup "perf_event": "/sys/fs/cgroup/perf_event/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373938   29006 cgroup.go:539] Creating cgroup "cpu": "/sys/fs/cgroup/cpu/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373953   29006 cgroup.go:539] Creating cgroup "pids": "/sys/fs/cgroup/pids/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.373981   29006 cgroup.go:539] Creating cgroup "rdma": "/sys/fs/cgroup/rdma/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374083   29006 container.go:1036] Created filestore file at "/var/lib/docker/overlay2/b9fb9f6066e80226abdbc70bcaa685393884ced9da82984692f2a19de07b3300/merged/.gvisor.filestore.1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d" for mount source "/var/lib/docker/overlay2/b9fb9f6066e80226abdbc70bcaa685393884ced9da82984692f2a19de07b3300/merged"
+D1129 11:19:15.374523   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/rdma/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374537   29006 cgroup.go:116] Setting "/sys/fs/cgroup/rdma/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374589   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/cpu/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374597   29006 cgroup.go:116] Setting "/sys/fs/cgroup/cpu/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374661   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/pids/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374670   29006 cgroup.go:116] Setting "/sys/fs/cgroup/pids/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374699   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/freezer/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374707   29006 cgroup.go:116] Setting "/sys/fs/cgroup/freezer/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374733   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/systemd/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374746   29006 cgroup.go:116] Setting "/sys/fs/cgroup/systemd/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374773   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/blkio/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374781   29006 cgroup.go:116] Setting "/sys/fs/cgroup/blkio/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374805   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/cpuset/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374813   29006 cgroup.go:116] Setting "/sys/fs/cgroup/cpuset/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374840   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/cpuacct/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374848   29006 cgroup.go:116] Setting "/sys/fs/cgroup/cpuacct/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374866   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/hugetlb/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374873   29006 cgroup.go:116] Setting "/sys/fs/cgroup/hugetlb/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374897   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/memory/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374905   29006 cgroup.go:116] Setting "/sys/fs/cgroup/memory/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374934   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/devices/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374941   29006 cgroup.go:116] Setting "/sys/fs/cgroup/devices/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.374968   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/perf_event/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.374979   29006 cgroup.go:116] Setting "/sys/fs/cgroup/perf_event/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.375015   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/net_cls/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.375027   29006 cgroup.go:116] Setting "/sys/fs/cgroup/net_cls/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+D1129 11:19:15.375067   29006 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/net_prio/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.375079   29006 cgroup.go:116] Setting "/sys/fs/cgroup/net_prio/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/cgroup.procs" to "0"
+I1129 11:19:15.375313   29006 namespace.go:202] Mapping host uid 0 to container uid 0 (size=4294967295)
+I1129 11:19:15.375334   29006 namespace.go:210] Mapping host gid 0 to container gid 0 (size=4294967295)
+D1129 11:19:15.375342   29006 donation.go:31] Donating FD 3: "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/log.json"
+D1129 11:19:15.375349   29006 donation.go:31] Donating FD 4: "/tmp/runsc/runsc.log.20231129-111915.375119.gofer.txt"
+D1129 11:19:15.375354   29006 donation.go:31] Donating FD 5: "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/config.json"
+D1129 11:19:15.375365   29006 donation.go:31] Donating FD 6: "|1"
+D1129 11:19:15.375373   29006 donation.go:31] Donating FD 7: "gofer IO FD"
+D1129 11:19:15.375380   29006 donation.go:31] Donating FD 8: "gofer IO FD"
+D1129 11:19:15.375394   29006 donation.go:31] Donating FD 9: "gofer IO FD"
+D1129 11:19:15.375401   29006 donation.go:31] Donating FD 10: "gofer IO FD"
+D1129 11:19:15.375408   29006 container.go:1348] Starting gofer: /proc/self/exe [runsc-gofer --root=/var/run/docker/runtime-runc/moby --debug=true --log=/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/log.json --log-format=json --debug-log=/tmp/runsc/ --log-packets=true --strace=true --log-fd=3 --debug-log-fd=4 gofer --bundle /run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d --gofer-mount-confs=lisafs:self,lisafs:none,lisafs:none,lisafs:none --spec-fd=5 --mounts-fd=6 --io-fds=7 --io-fds=8 --io-fds=9 --io-fds=10]
+I1129 11:19:15.376469   29006 container.go:1352] Gofer started, PID: 29012
+D1129 11:19:15.376881   29006 sandbox.go:84] Attempting to create socket file "/var/run/docker/runtime-runc/moby/runsc-1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d.sock"
+D1129 11:19:15.376963   29006 sandbox.go:87] Using socket file "/var/run/docker/runtime-runc/moby/runsc-1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d.sock"
+I1129 11:19:15.376977   29006 sandbox.go:774] Control socket path: "/var/run/docker/runtime-runc/moby/runsc-1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d.sock"
+I1129 11:19:15.377007   29006 sandbox.go:809] Sandbox will be started in new mount, IPC and UTS namespaces
+I1129 11:19:15.377020   29006 sandbox.go:819] Sandbox will be started in the current PID namespace
+I1129 11:19:15.377032   29006 sandbox.go:838] Sandbox will be started in the container's network namespace: {Type:network Path:}
+I1129 11:19:15.377065   29006 sandbox.go:860] Sandbox will be started in container's user namespace: {Type:user Path:}
+I1129 11:19:15.377084   29006 namespace.go:202] Mapping host uid 0 to container uid 0 (size=4294967295)
+I1129 11:19:15.377093   29006 namespace.go:210] Mapping host gid 0 to container gid 0 (size=4294967295)
+I1129 11:19:15.377165   29006 sandbox.go:890] Sandbox will be started in minimal chroot
+D1129 11:19:15.377190   29006 sandbox.go:1489] Changing "/dev/stdin" ownership to 0/0
+D1129 11:19:15.377204   29006 sandbox.go:1489] Changing "/dev/stdout" ownership to 0/0
+D1129 11:19:15.377213   29006 sandbox.go:1489] Changing "/dev/stderr" ownership to 0/0
+D1129 11:19:15.377326   29006 donation.go:31] Donating FD 3: "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/log.json"
+D1129 11:19:15.377341   29006 donation.go:31] Donating FD 4: "/tmp/runsc/runsc.log.20231129-111915.376630.boot.txt"
+D1129 11:19:15.377349   29006 donation.go:31] Donating FD 5: "sandbox IO FD"
+D1129 11:19:15.377355   29006 donation.go:31] Donating FD 6: "sandbox IO FD"
+D1129 11:19:15.377370   29006 donation.go:31] Donating FD 7: "sandbox IO FD"
+D1129 11:19:15.377377   29006 donation.go:31] Donating FD 8: "sandbox IO FD"
+D1129 11:19:15.377383   29006 donation.go:31] Donating FD 9: "/var/lib/docker/overlay2/b9fb9f6066e80226abdbc70bcaa685393884ced9da82984692f2a19de07b3300/merged/.gvisor.filestore.1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:19:15.377399   29006 donation.go:31] Donating FD 10: "|0"
+D1129 11:19:15.377406   29006 donation.go:31] Donating FD 11: "|1"
+D1129 11:19:15.377412   29006 donation.go:31] Donating FD 12: "control_server_socket"
+D1129 11:19:15.377422   29006 donation.go:31] Donating FD 13: "/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/config.json"
+D1129 11:19:15.377432   29006 donation.go:31] Donating FD 14: "/dev/stdin"
+D1129 11:19:15.377439   29006 donation.go:31] Donating FD 15: "/dev/stdout"
+D1129 11:19:15.377445   29006 donation.go:31] Donating FD 16: "/dev/stderr"
+D1129 11:19:15.377452   29006 sandbox.go:1075] Starting sandbox: /proc/self/exe [runsc-sandbox --root=/var/run/docker/runtime-runc/moby --debug=true --log=/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/log.json --log-format=json --debug-log=/tmp/runsc/ --log-packets=true --strace=true --log-fd=3 --debug-log-fd=4 boot --bundle=/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d --gofer-mount-confs=lisafs:self,lisafs:none,lisafs:none,lisafs:none --apply-caps=true --setup-root --total-host-memory 33378537472 --cpu-num 8 --total-memory 33378537472 --io-fds=5 --io-fds=6 --io-fds=7 --io-fds=8 --dev-io-fd=-1 --gofer-filestore-fds=9 --mounts-fd=10 --start-sync-fd=11 --controller-fd=12 --spec-fd=13 --stdio-fds=14 --stdio-fds=15 --stdio-fds=16 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d]
+D1129 11:19:15.377488   29006 sandbox.go:1076] SysProcAttr: &{Chroot: Credential:0xc0002f1140 Ptrace:false Setsid:true Setpgid:false Setctty:false Noctty:false Ctty:0 Foreground:false Pgid:0 Pdeathsig:signal 0 Cloneflags:0 Unshareflags:0 UidMappings:[{ContainerID:0 HostID:0 Size:4294967295}] GidMappings:[{ContainerID:0 HostID:0 Size:4294967295}] GidMappingsEnableSetgroups:false AmbientCaps:[] UseCgroupFD:false CgroupFD:0}
+I1129 11:19:15.378612   29006 sandbox.go:1104] Sandbox started, PID: 29017
+D1129 11:19:15.555937   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/freezer"
+D1129 11:19:15.555988   29006 cgroup.go:116] Setting "/sys/fs/cgroup/freezer/cgroup.procs" to "0"
+D1129 11:19:15.556074   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/systemd/system.slice/containerd.service"
+D1129 11:19:15.556099   29006 cgroup.go:116] Setting "/sys/fs/cgroup/systemd/system.slice/containerd.service/cgroup.procs" to "0"
+D1129 11:19:15.556201   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/rdma"
+D1129 11:19:15.556222   29006 cgroup.go:116] Setting "/sys/fs/cgroup/rdma/cgroup.procs" to "0"
+D1129 11:19:15.556280   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/hugetlb"
+D1129 11:19:15.556298   29006 cgroup.go:116] Setting "/sys/fs/cgroup/hugetlb/cgroup.procs" to "0"
+D1129 11:19:15.556361   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/perf_event"
+D1129 11:19:15.556379   29006 cgroup.go:116] Setting "/sys/fs/cgroup/perf_event/cgroup.procs" to "0"
+D1129 11:19:15.556446   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/memory/system.slice/containerd.service"
+D1129 11:19:15.556468   29006 cgroup.go:116] Setting "/sys/fs/cgroup/memory/system.slice/containerd.service/cgroup.procs" to "0"
+D1129 11:19:15.556528   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/cpuacct/system.slice/containerd.service"
+D1129 11:19:15.556550   29006 cgroup.go:116] Setting "/sys/fs/cgroup/cpuacct/system.slice/containerd.service/cgroup.procs" to "0"
+D1129 11:19:15.556630   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/net_cls"
+D1129 11:19:15.556669   29006 cgroup.go:116] Setting "/sys/fs/cgroup/net_cls/cgroup.procs" to "0"
+D1129 11:19:15.556743   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/blkio/system.slice/containerd.service"
+D1129 11:19:15.556763   29006 cgroup.go:116] Setting "/sys/fs/cgroup/blkio/system.slice/containerd.service/cgroup.procs" to "0"
+D1129 11:19:15.556822   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/devices/system.slice/containerd.service"
+D1129 11:19:15.556843   29006 cgroup.go:116] Setting "/sys/fs/cgroup/devices/system.slice/containerd.service/cgroup.procs" to "0"
+D1129 11:19:15.556908   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/net_prio"
+D1129 11:19:15.556928   29006 cgroup.go:116] Setting "/sys/fs/cgroup/net_prio/cgroup.procs" to "0"
+D1129 11:19:15.556986   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/cpu/system.slice/containerd.service"
+D1129 11:19:15.557007   29006 cgroup.go:116] Setting "/sys/fs/cgroup/cpu/system.slice/containerd.service/cgroup.procs" to "0"
+D1129 11:19:15.557056   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/cpuset"
+D1129 11:19:15.557074   29006 cgroup.go:116] Setting "/sys/fs/cgroup/cpuset/cgroup.procs" to "0"
+D1129 11:19:15.588778   29006 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/pids/system.slice/containerd.service"
+D1129 11:19:15.588824   29006 cgroup.go:116] Setting "/sys/fs/cgroup/pids/system.slice/containerd.service/cgroup.procs" to "0"
+D1129 11:19:15.588891   29006 container.go:1073] Save container, cid: 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d
+D1129 11:19:15.589598   29006 hook.go:63] Executing hook {Path:/proc/1653/exe Args:[libnetwork-setkey -exec-root=/var/run/docker 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d 340c13aa861e] Env:[] Timeout:<nil>}, state: {Version:1.1.0-rc.1 ID:1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d Status:created Pid:29017 Bundle:/run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d Annotations:map[]}
+D1129 11:19:15.701439   29006 hook.go:118] Execute hook "/proc/1653/exe" success!
+I1129 11:19:15.701573   29006 main.go:224] Exiting with status: 0

@@ -1,0 +1,31 @@
+I1129 11:28:41.811091   29913 main.go:189] ***************************
+I1129 11:28:41.811127   29913 main.go:190] Args: [/usr/bin/runsc --debug-log=/tmp/runsc/ --debug --log-packets --strace --root /var/run/docker/runtime-runc/moby --log /run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/log.json --log-format json kill 2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23 15]
+I1129 11:28:41.811143   29913 main.go:191] Version release-20231113.0
+I1129 11:28:41.811149   29913 main.go:192] GOOS: linux
+I1129 11:28:41.811154   29913 main.go:193] GOARCH: amd64
+I1129 11:28:41.811160   29913 main.go:194] PID: 29913
+I1129 11:28:41.811167   29913 main.go:195] UID: 0, GID: 0
+I1129 11:28:41.811172   29913 main.go:196] Configuration:
+I1129 11:28:41.811178   29913 main.go:197] 		RootDir: /var/run/docker/runtime-runc/moby
+I1129 11:28:41.811183   29913 main.go:198] 		Platform: systrap
+I1129 11:28:41.811189   29913 main.go:199] 		FileAccess: exclusive
+I1129 11:28:41.811195   29913 main.go:200] 		Directfs: true
+I1129 11:28:41.811201   29913 main.go:201] 		Overlay: root:self
+I1129 11:28:41.811207   29913 main.go:202] 		Network: sandbox, logging: true
+I1129 11:28:41.811214   29913 main.go:203] 		Strace: true, max size: 1024, syscalls: 
+I1129 11:28:41.811220   29913 main.go:204] 		IOURING: false
+I1129 11:28:41.811225   29913 main.go:205] 		Debug: true
+I1129 11:28:41.811231   29913 main.go:206] 		Systemd: false
+I1129 11:28:41.811239   29913 main.go:207] ***************************
+D1129 11:28:41.811255   29913 state_file.go:78] Load container, rootDir: "/var/run/docker/runtime-runc/moby", id: {SandboxID: ContainerID:2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23}, opts: {Exact:false SkipCheck:false TryLock:false RootContainer:false}
+D1129 11:28:41.812315   29913 container.go:673] Signal container, cid: 2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23, signal: signal 0 (0)
+D1129 11:28:41.812331   29913 sandbox.go:1211] Signal sandbox "2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23"
+D1129 11:28:41.812339   29913 sandbox.go:613] Connecting to sandbox "2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23"
+D1129 11:28:41.812410   29913 urpc.go:568] urpc: successfully marshalled 144 bytes.
+D1129 11:28:41.812614   29913 urpc.go:611] urpc: unmarshal success.
+D1129 11:28:41.812638   29913 container.go:673] Signal container, cid: 2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23, signal: terminated (15)
+D1129 11:28:41.812663   29913 sandbox.go:1211] Signal sandbox "2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23"
+D1129 11:28:41.812675   29913 sandbox.go:613] Connecting to sandbox "2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23"
+D1129 11:28:41.812705   29913 urpc.go:568] urpc: successfully marshalled 145 bytes.
+D1129 11:28:41.812906   29913 urpc.go:611] urpc: unmarshal success.
+I1129 11:28:41.812932   29913 main.go:224] Exiting with status: 0

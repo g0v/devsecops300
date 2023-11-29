@@ -1,0 +1,38 @@
+I1129 11:19:15.125407   28955 main.go:189] ***************************
+I1129 11:19:15.125592   28955 main.go:190] Args: [/usr/bin/runsc --debug-log=/tmp/runsc/ --debug --log-packets --strace --root /var/run/docker/runtime-runc/moby --log /run/containerd/io.containerd.runtime.v2.task/moby/2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23/log.json --log-format json start 2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23]
+I1129 11:19:15.125776   28955 main.go:191] Version release-20231113.0
+I1129 11:19:15.125818   28955 main.go:192] GOOS: linux
+I1129 11:19:15.125852   28955 main.go:193] GOARCH: amd64
+I1129 11:19:15.125886   28955 main.go:194] PID: 28955
+I1129 11:19:15.125925   28955 main.go:195] UID: 0, GID: 0
+I1129 11:19:15.125957   28955 main.go:196] Configuration:
+I1129 11:19:15.125989   28955 main.go:197] 		RootDir: /var/run/docker/runtime-runc/moby
+I1129 11:19:15.126022   28955 main.go:198] 		Platform: systrap
+I1129 11:19:15.126055   28955 main.go:199] 		FileAccess: exclusive
+I1129 11:19:15.126097   28955 main.go:200] 		Directfs: true
+I1129 11:19:15.126132   28955 main.go:201] 		Overlay: root:self
+I1129 11:19:15.126170   28955 main.go:202] 		Network: sandbox, logging: true
+I1129 11:19:15.126209   28955 main.go:203] 		Strace: true, max size: 1024, syscalls: 
+I1129 11:19:15.126243   28955 main.go:204] 		IOURING: false
+I1129 11:19:15.126276   28955 main.go:205] 		Debug: true
+I1129 11:19:15.126308   28955 main.go:206] 		Systemd: false
+I1129 11:19:15.126358   28955 main.go:207] ***************************
+D1129 11:19:15.126444   28955 state_file.go:78] Load container, rootDir: "/var/run/docker/runtime-runc/moby", id: {SandboxID: ContainerID:2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23}, opts: {Exact:false SkipCheck:false TryLock:false RootContainer:false}
+W1129 11:19:15.134060   28955 specutils.go:118] AppArmor profile "docker-default" is being ignored
+W1129 11:19:15.134194   28955 specutils.go:124] noNewPrivileges ignored. PR_SET_NO_NEW_PRIVS is assumed to always be set.
+D1129 11:19:15.134263   28955 container.go:422] Start container, cid: 2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23
+D1129 11:19:15.134366   28955 sandbox.go:385] Start root sandbox "2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23", PID: 28907
+D1129 11:19:15.134409   28955 sandbox.go:613] Connecting to sandbox "2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23"
+I1129 11:19:15.134587   28955 network.go:58] Setting up network
+I1129 11:19:15.134809   28955 namespace.go:108] Applying namespace network at path "/proc/28907/ns/net"
+D1129 11:19:15.136896   28955 network.go:282] Setting up network channels
+D1129 11:19:15.136984   28955 network.go:285] Creating Channel 0
+D1129 11:19:15.137110   28955 network.go:332] Setting up network, config: {FilePayload:{Files:[0xc0002a6d50]} LoopbackLinks:[{Name:lo Addresses:[127.0.0.1/8] Routes:[{Destination:{IP:127.0.0.0 Mask:ff000000} Gateway:<nil>}] GvisorGROTimeout:0s}] FDBasedLinks:[{Name:eth0 InterfaceIndex:0 MTU:1500 Addresses:[172.17.0.3/16] Routes:[{Destination:{IP:172.17.0.0 Mask:ffff0000} Gateway:<nil>}] GSOMaxSize:65536 GvisorGSOEnabled:false GvisorGROTimeout:0s TXChecksumOffload:false RXChecksumOffload:true LinkAddress:02:42:ac:11:00:03 QDisc:fifo Neighbors:[] NumChannels:1}] XDPLinks:[] Defaultv4Gateway:{Route:{Destination:{IP:0.0.0.0 Mask:00000000000000000000ffff00000000} Gateway:172.17.0.1} Name:eth0} Defaultv6Gateway:{Route:{Destination:{IP:<nil> Mask:<nil>} Gateway:<nil>} Name:} PCAP:false NATBlob:false}
+D1129 11:19:15.138085   28955 urpc.go:568] urpc: successfully marshalled 878 bytes.
+D1129 11:19:15.170930   28955 urpc.go:611] urpc: unmarshal success.
+I1129 11:19:15.171046   28955 namespace.go:129] Restoring namespace network
+D1129 11:19:15.171253   28955 urpc.go:568] urpc: successfully marshalled 112 bytes.
+D1129 11:19:15.259717   28955 urpc.go:611] urpc: unmarshal success.
+D1129 11:19:15.259756   28955 container.go:1073] Save container, cid: 2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23
+D1129 11:19:15.260271   28955 state_file.go:78] Load container, rootDir: "/var/run/docker/runtime-runc/moby", id: {SandboxID:2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23 ContainerID:2bb1fdfd8adda23299bd80291a6e1b4a7f02dbf39ee09100f4b81ef093ec1e23}, opts: {Exact:true SkipCheck:true TryLock:false RootContainer:false}
+I1129 11:19:15.260914   28955 main.go:224] Exiting with status: 0

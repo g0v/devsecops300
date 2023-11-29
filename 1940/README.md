@@ -3,7 +3,8 @@
 - 101: [DevSecOps: Seamlessly Integrating Security into the Pipeline](./guide101.md)
 - 102: [DevSecOps from Zero to Hero: A Step-by-Step Guide to Avoid SQL Injection Vulnerabilities](./guide102.md)
 - 103: [DevSecOps ELI5 Guide from Zero to Hero: The Ultimate Step-by-Step Guide to Building an Invincible Fortress 🏰](./guide103.md)
-- 104: [DevSecOps: Shift Left Security](./guide104.md)
+- 104: [DevSecOps: Shift Left Security](./guide104/README.md)
+- 105: [Detecting Path Traversal and Data Exfiltration in Containers using gVisor](./guide105/README.md)
 
 # Why 1940?
 

@@ -1,0 +1,22 @@
+I1129 11:28:41.587186   29890 main.go:189] ***************************
+I1129 11:28:41.587218   29890 main.go:190] Args: [/usr/bin/runsc --debug-log=/tmp/runsc/ --debug --log-packets --strace --root /var/run/docker/runtime-runc/moby --log /run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/log.json --log-format json delete --force 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d]
+I1129 11:28:41.587233   29890 main.go:191] Version release-20231113.0
+I1129 11:28:41.587239   29890 main.go:192] GOOS: linux
+I1129 11:28:41.587244   29890 main.go:193] GOARCH: amd64
+I1129 11:28:41.587251   29890 main.go:194] PID: 29890
+I1129 11:28:41.587257   29890 main.go:195] UID: 0, GID: 0
+I1129 11:28:41.587263   29890 main.go:196] Configuration:
+I1129 11:28:41.587269   29890 main.go:197] 		RootDir: /var/run/docker/runtime-runc/moby
+I1129 11:28:41.587275   29890 main.go:198] 		Platform: systrap
+I1129 11:28:41.587281   29890 main.go:199] 		FileAccess: exclusive
+I1129 11:28:41.587287   29890 main.go:200] 		Directfs: true
+I1129 11:28:41.587293   29890 main.go:201] 		Overlay: root:self
+I1129 11:28:41.587300   29890 main.go:202] 		Network: sandbox, logging: true
+I1129 11:28:41.587308   29890 main.go:203] 		Strace: true, max size: 1024, syscalls: 
+I1129 11:28:41.587314   29890 main.go:204] 		IOURING: false
+I1129 11:28:41.587319   29890 main.go:205] 		Debug: true
+I1129 11:28:41.587325   29890 main.go:206] 		Systemd: false
+I1129 11:28:41.587335   29890 main.go:207] ***************************
+D1129 11:28:41.587347   29890 state_file.go:78] Load container, rootDir: "/var/run/docker/runtime-runc/moby", id: {SandboxID: ContainerID:1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d}, opts: {Exact:false SkipCheck:false TryLock:false RootContainer:false}
+W1129 11:28:41.587403   29890 delete.go:75] couldn't find container "1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d": file does not exist
+I1129 11:28:41.587415   29890 main.go:224] Exiting with status: 0

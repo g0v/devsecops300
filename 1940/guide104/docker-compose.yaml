@@ -1,0 +1,34 @@
+version: '3.8'
+name: devsecops231128
+services:
+  devops:
+    # Name of the service within Docker Compose.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: devsecops3001:latest
+    # Command to generate an encryption key, list files, set permissions, and list files again before sleeping.
+    entrypoint:
+      - /bin/bash
+      - -c 
+      - |
+        age-keygen > /home/key101.txt
+        ls -al /home
+        chmod 600 /home/key101.txt
+        ls -al /home
+        sleep 1d
+
+  devsecops:
+    # Name of the service within Docker Compose emphasizing the security-first approach.
+    image: devsecops3001:latest
+    # Command to set default ACL, generate an encryption key, list files, and sleep.
+    entrypoint:
+      - /bin/bash
+      - -c 
+      - |
+        # Security 'shift left': Set default ACL to secure all files at creation.
+        setfacl -m default:user::rw-,group::---,other::--- /home
+        sleep 2  # let the devops container starts first.
+        age-keygen > /home/key101.txt
+        ls -al /home
+        sleep 1d

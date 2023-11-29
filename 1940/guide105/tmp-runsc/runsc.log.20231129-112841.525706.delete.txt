@@ -1,0 +1,45 @@
+I1129 11:28:41.525907   29876 main.go:189] ***************************
+I1129 11:28:41.526091   29876 main.go:190] Args: [/usr/bin/runsc --debug-log=/tmp/runsc/ --debug --log-packets --strace --root /var/run/docker/runtime-runc/moby --log /run/containerd/io.containerd.runtime.v2.task/moby/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d/log.json --log-format json delete 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d]
+I1129 11:28:41.526159   29876 main.go:191] Version release-20231113.0
+I1129 11:28:41.526193   29876 main.go:192] GOOS: linux
+I1129 11:28:41.526252   29876 main.go:193] GOARCH: amd64
+I1129 11:28:41.526324   29876 main.go:194] PID: 29876
+I1129 11:28:41.526368   29876 main.go:195] UID: 0, GID: 0
+I1129 11:28:41.526401   29876 main.go:196] Configuration:
+I1129 11:28:41.526433   29876 main.go:197] 		RootDir: /var/run/docker/runtime-runc/moby
+I1129 11:28:41.526466   29876 main.go:198] 		Platform: systrap
+I1129 11:28:41.526498   29876 main.go:199] 		FileAccess: exclusive
+I1129 11:28:41.526538   29876 main.go:200] 		Directfs: true
+I1129 11:28:41.526572   29876 main.go:201] 		Overlay: root:self
+I1129 11:28:41.526610   29876 main.go:202] 		Network: sandbox, logging: true
+I1129 11:28:41.526648   29876 main.go:203] 		Strace: true, max size: 1024, syscalls: 
+I1129 11:28:41.526681   29876 main.go:204] 		IOURING: false
+I1129 11:28:41.526745   29876 main.go:205] 		Debug: true
+I1129 11:28:41.526779   29876 main.go:206] 		Systemd: false
+I1129 11:28:41.526811   29876 main.go:207] ***************************
+D1129 11:28:41.526883   29876 state_file.go:78] Load container, rootDir: "/var/run/docker/runtime-runc/moby", id: {SandboxID: ContainerID:1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d}, opts: {Exact:false SkipCheck:false TryLock:false RootContainer:false}
+D1129 11:28:41.532154   29876 container.go:673] Signal container, cid: 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d, signal: signal 0 (0)
+W1129 11:28:41.532216   29876 state_file.go:124] Cannot signal container 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d for sandbox 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d (err: sandbox is not running); assuming container is in stopped state
+D1129 11:28:41.532243   29876 container.go:790] Destroy container, cid: 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d
+D1129 11:28:41.532305   29876 container.go:1087] Destroying container, cid: 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d
+D1129 11:28:41.532327   29876 sandbox.go:1437] Destroying root container by destroying sandbox, cid: 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d
+D1129 11:28:41.532346   29876 sandbox.go:1186] Destroying sandbox "1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.532383   29876 sandbox.go:1195] Killing sandbox "1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.532444   29876 container.go:1101] Killing gofer for container, cid: 1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d, PID: 29012
+W1129 11:28:41.532466   29876 container.go:1104] Error sending signal 9 to gofer 29012: no such process
+D1129 11:28:41.532494   29876 cgroup.go:549] Deleting cgroup "/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.532604   29876 cgroup.go:557] Removing cgroup controller for key="devices" path="/sys/fs/cgroup/devices/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.532729   29876 cgroup.go:557] Removing cgroup controller for key="systemd" path="/sys/fs/cgroup/systemd/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533005   29876 cgroup.go:557] Removing cgroup controller for key="cpu" path="/sys/fs/cgroup/cpu/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533097   29876 cgroup.go:557] Removing cgroup controller for key="net_cls" path="/sys/fs/cgroup/net_cls/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533217   29876 cgroup.go:557] Removing cgroup controller for key="freezer" path="/sys/fs/cgroup/freezer/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533296   29876 cgroup.go:557] Removing cgroup controller for key="perf_event" path="/sys/fs/cgroup/perf_event/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533366   29876 cgroup.go:557] Removing cgroup controller for key="pids" path="/sys/fs/cgroup/pids/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533419   29876 cgroup.go:557] Removing cgroup controller for key="cpuacct" path="/sys/fs/cgroup/cpuacct/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533445   29876 cgroup.go:557] Removing cgroup controller for key="rdma" path="/sys/fs/cgroup/rdma/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533490   29876 cgroup.go:557] Removing cgroup controller for key="blkio" path="/sys/fs/cgroup/blkio/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533592   29876 cgroup.go:557] Removing cgroup controller for key="cpuset" path="/sys/fs/cgroup/cpuset/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533657   29876 cgroup.go:557] Removing cgroup controller for key="memory" path="/sys/fs/cgroup/memory/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533747   29876 cgroup.go:557] Removing cgroup controller for key="net_prio" path="/sys/fs/cgroup/net_prio/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+D1129 11:28:41.533822   29876 cgroup.go:557] Removing cgroup controller for key="hugetlb" path="/sys/fs/cgroup/hugetlb/docker/1356943558b55cd0212d2b44145fec6eaa86eab4b71e3dbc7d2e7b6479dc198d"
+I1129 11:28:41.534613   29876 main.go:224] Exiting with status: 0
