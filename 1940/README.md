@@ -6,6 +6,7 @@
 - 104: [DevSecOps: Shift Left Security](./guide104/README.md)
 - 105: [Detecting Path Traversal and Data Exfiltration in Containers using gVisor](./guide105/README.md)
 - 106: [Integrating Continuous Testing, Security, and Compliance: The Core of DevSecOps](./guide106.md)
+- 107: [Adapting DevSecOps for Enhanced Security in the Age of Software-Defined Everything](./guide107.md)
 
 # Why 1940?
 
