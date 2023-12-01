@@ -5,6 +5,7 @@
 - 103: [DevSecOps ELI5 Guide from Zero to Hero: The Ultimate Step-by-Step Guide to Building an Invincible Fortress 🏰](./guide103.md)
 - 104: [DevSecOps: Shift Left Security](./guide104/README.md)
 - 105: [Detecting Path Traversal and Data Exfiltration in Containers using gVisor](./guide105/README.md)
+- 106: [Integrating Continuous Testing, Security, and Compliance: The Core of DevSecOps](./guide106.md)
 
 # Why 1940?
 
