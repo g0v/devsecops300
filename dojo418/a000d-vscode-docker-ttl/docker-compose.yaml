@@ -1,0 +1,7 @@
+services:
+  ghost:
+    image: ttl.sh/0eca6e4a-369b-430d-b42a-42b90096dd93:4h
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    ports:
+      - 3000:3000

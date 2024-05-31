@@ -1,0 +1,16 @@
+#
+# docker compose up -d
+# docker compose exec ghost sh
+# ...
+# exit
+# docker compose down
+services:
+  ghost:
+    image: busybox:1.36.1
+    command:
+      - /bin/sh
+      - -c
+      - |
+        env
+        date
+        sleep 10000

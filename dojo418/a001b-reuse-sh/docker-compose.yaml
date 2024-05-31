@@ -1,0 +1,16 @@
+services:
+  box101:
+    image: busybox:1.36.1
+    volumes:
+      - ./app.sh:/app.sh:ro
+      - ./app2.sh:/app2.sh:ro
+      - ./alib-add.sh:/alib-add.sh:ro
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "ENV:"
+        env
+        echo "REUSE:"
+        sh app.sh 99 2
+        sh app2.sh 88 23

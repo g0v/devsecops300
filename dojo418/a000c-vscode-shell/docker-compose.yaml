@@ -1,0 +1,7 @@
+services:
+  ghost:
+    image: gitpod/openvscode-server:1.89.1
+    volumes:
+      - ./app.sh:/home/workspace/app.sh:ro
+    ports:
+      - 3000:3000

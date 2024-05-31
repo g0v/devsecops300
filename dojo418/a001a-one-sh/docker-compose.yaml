@@ -1,0 +1,6 @@
+services:
+  box101:
+    image: busybox:1.36.1
+    volumes:
+      - ./app1.sh:/app1.sh:ro
+    command: sh app1.sh 99 1
